@@ -39,10 +39,22 @@ class Querys {
 		return $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	public function select_join() {
+		$sql = "SELECT f.id AS id, f.name AS name, r.rate AS rating
+					FROM films AS f
+				        INNER JOIN rating AS r
+				        	ON f.id = r.id_film"
+		;
+
+		$statement = $this->db->prepare($sql);
+		$statement->execute();
+		return $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	public function insert($table, $name, $pass, $token) {
 		$data = [
-			'name' => $name,
-			'pass' => $pass,
+			'name'  => $name,
+			'pass'  => $pass,
 			'token' => $token,
 		];
 
