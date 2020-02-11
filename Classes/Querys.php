@@ -24,14 +24,20 @@ class Querys {
 		}
 	}
 
-//	public function select_one($table, $value, $column, $name) {
-//		$sql = "SELECT $column FROM $table WHERE name = :login_name";
-//		$statement = $this->db->prepare($sql);
-//		$statement->bindParam(':login_name', $login_name);
-//		$statement->execute();
-//		$result = $statement->fetch(PDO::FETCH_ASSOC);
-//	}
+	public function select_one($table, $column, $value) {
+		$sql = "SELECT $column FROM $table WHERE $column = :value";
+		$statement = $this->db->prepare($sql);
+		$statement->bindParam(':value', $value);
+		$statement->execute();
+		return $result = $statement->fetch(PDO::FETCH_ASSOC);
+	}
 
+	public function select($table) {
+		$sql = "SELECT * FROM $table";
+		$statement = $this->db->prepare($sql);
+		$statement->execute();
+		return $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+	}
 
 	public function insert($table, $name, $pass, $token) {
 		$data = [
