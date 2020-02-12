@@ -1,6 +1,6 @@
 <?php
-require_once 'classes/Connection.php';
-require_once 'classes/Querys.php';
+require_once __DIR__  . '/classes/Connection.php';
+require_once __DIR__  . '/classes/Querys.php';
 
 $options = ['cost' => 12];
 
@@ -20,6 +20,3 @@ $users = $db->insert('users', $name, $pass, $token);
 
 header('Location: http://api.loc/login.php');
 exit;
-
-// TODO
-// создать сессию и редиректить на room.php

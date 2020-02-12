@@ -1,10 +1,10 @@
 <?php
-	require_once 'classes/Content.php';
+	require_once __DIR__  . '/classes/Content.php';
 
 	$title = new Content;
 	$out_title = $title->get_title('Панель администратора');
-	require_once 'Views/view_head.php';
-	require_once 'Views/view_heder_nav.php';
+	require_once __DIR__  . '/Views/view_head.php';
+	require_once __DIR__  . '/Views/view_heder_nav.php';
 ?>
 
 <div class="container">
@@ -15,4 +15,4 @@
 	</div>
 </div>
 
-<?php require_once 'Views/view_footer.php'?>
+<?php require_once __DIR__  . '/Views/view_footer.php'?>

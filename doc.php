@@ -1,12 +1,12 @@
 <?php
     session_start();
 
-	require_once 'classes/Content.php';
+	require_once __DIR__  . '/classes/Content.php';
 
 	$title = new Content;
 	$out_title = $title->get_title('Документация');
-	require_once 'Views/view_head.php';
-	require_once 'Views/view_heder_nav.php';
+	require_once __DIR__  . '/Views/view_head.php';
+	require_once __DIR__  . '/Views/view_heder_nav.php';
 ?>
 <div class="container">
 	<ol>
@@ -21,4 +21,4 @@
 	<p>Токен будут доступен после регистрации</p>
 </div>
 
-<?php require_once 'Views/view_footer.php'?>
+<?php require_once __DIR__  . '/Views/view_footer.php'?>

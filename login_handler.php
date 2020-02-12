@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require_once 'classes/Connection.php';
-require_once 'classes/Querys.php';
+require_once __DIR__  . '/classes/Connection.php';
+require_once __DIR__  . '/classes/Querys.php';
 
 $login_name = $_POST['name'];
 $login_pass = $_POST['password'];

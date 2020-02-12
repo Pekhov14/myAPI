@@ -1,10 +1,10 @@
 <?php
-    require_once 'classes/Content.php';
+    require_once  __DIR__  . '/classes/Content.php';
 
     $title = new Content;
     $out_title = $title->get_title('Регистрация');
-    require_once 'Views/view_head.php';
-    require_once 'Views/view_heder_nav.php';
+    require_once __DIR__ . '/Views/view_head.php';
+    require_once __DIR__ . '/Views/view_heder_nav.php';
 ?>
 <div class="container">
     <section class="jumbotron text-center">
@@ -15,7 +15,7 @@
         </div>
     </section>
 
-    <?php require_once 'Views/view_register.php'; ?>
+    <?php require_once __DIR__ . '/Views/view_register.php'; ?>
 </div>
 
-<?php require_once 'Views/view_footer.php'?>
+<?php require_once __DIR__ . '/Views/view_footer.php'?>
