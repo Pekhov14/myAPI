@@ -1,5 +1,5 @@
 <?php
-	require_once __DIR__  . '/classes/Content.php';
+	require_once __DIR__  . '/Classes/Content.php';
 
 	$title = new Content;
 	$out_title = $title->get_title('Панель администратора');

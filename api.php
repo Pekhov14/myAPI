@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__  . '/classes/Connection.php';
-require_once __DIR__  . '/classes/Querys.php';
+require_once __DIR__  . '/Classes/Connection.php';
+require_once __DIR__  . '/Classes/Querys.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['token'])) {
 	$url_token = $_GET['token'];

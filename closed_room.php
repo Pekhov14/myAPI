@@ -8,6 +8,6 @@ if(isset($_SESSION['user_name'])){
 //	$entrance = $db->input_and_selection('users', $login_name, $login_pass);
 }
 elseif (empty($_SESSION['user_name'])) {
-	header('Location: http://api.loc/index.php');
+	header('Location: index.php');
 	exit();
 }
