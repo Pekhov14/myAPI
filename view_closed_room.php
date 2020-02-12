@@ -1,16 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-</head>
-<body>
-	<?php echo 'Привет '.$_SESSION['user_name'].'!'; ?>
-	<p>Ваш токен: <?php echo $_SESSION['token']; ?></p>
+<?php
+	require_once 'classes/Content.php';
 
-	<p><a href="out.php">Выйти</a></p>
-</body>
-</html>
+	$title = new Content;
+	$out_title = $title->get_title('Панель администратора');
+	require_once 'Views/view_head.php';
+	require_once 'Views/view_heder_nav.php';
+?>
+
+<div class="container">
+	<br>
+	<h4>Ваш токен: </h4>
+	<div class="alert alert-success" role="alert">
+		<?php echo $_SESSION['token']; ?>
+	</div>
+</div>
+
+<?php require_once 'Views/view_footer.php'?>

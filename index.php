@@ -1,21 +1,21 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>API</title>
-</head>
-<body>
-<h1>API</h1>
-<h4>Регистрация</h4>
-<a href="login.php">Войти</a> <br><br>
-<form action="register.php" method="post">
-    <input type="text" name="name"> <br> <br>
-    <input type="password" name="password"> <br> <br>
-    <input type="submit" value="Зарегестрироваться">
-</form>
+<?php
+    require_once 'classes/Content.php';
 
-</body>
-</html>
+    $title = new Content;
+    $out_title = $title->get_title('Регистрация');
+    require_once 'Views/view_head.php';
+    require_once 'Views/view_heder_nav.php';
+?>
+<div class="container">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>Films API</h1>
+            <p class="lead text-muted">Это отбор лучших фильмов с оценками. Мы заботимся о вашем времени,
+            смотрите хорошее кино.</p>
+        </div>
+    </section>
+
+    <?php require_once 'Views/view_register.php'; ?>
+</div>
+
+<?php require_once 'Views/view_footer.php'?>

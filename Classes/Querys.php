@@ -1,6 +1,5 @@
 <?php
 
-
 class Querys {
 	private $db;
 
