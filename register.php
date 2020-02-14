@@ -15,8 +15,14 @@ $pass  = password_hash(htmlspecialchars($_POST['password']),PASSWORD_BCRYPT, $op
 //];
 //var_dump($arr_insert['token']);
 
-$db = new Querys(Connection::make());
-$users = $db->insert('users', $name, $pass, $token);
+if (!empty($name) && !empty($pass)) {
+	$db = new Querys(Connection::make());
+	$users = $db->insert('users', $name, $pass, $token);
 
-header('Location: http://api.loc/login.php');
-exit;
+	header('Location: login.php');
+	exit;
+} else {
+	header('Location: index.php');
+}
+
+

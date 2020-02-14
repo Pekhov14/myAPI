@@ -19,7 +19,7 @@ class Querys {
 			$_SESSION['user_name'] = $login_name;
 			return $result;
 		} else {
-			return 'Пароль неправильный.';
+			return false;
 		}
 	}
 
